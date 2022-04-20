@@ -1,0 +1,7 @@
+﻿  string.cpp
+D:\GIT\secondSem_thirdLab\src\string.cpp(12,26): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\GIT\secondSem_thirdLab\src\string.cpp(29,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\GIT\secondSem_thirdLab\src\string.cpp(46,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\GIT\secondSem_thirdLab\src\string.cpp(74,36): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\GIT\secondSem_thirdLab\src\string.cpp(75,29): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  ThirdLab.vcxproj -> D:\GIT\secondSem_thirdLab\Debug\ThirdLab.exe
