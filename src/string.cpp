@@ -1,4 +1,4 @@
-#include <String.h>
+п»ї#include <String.h>
 #include <cstring>
 #include "..\headers\String.h"
 
@@ -25,7 +25,6 @@ TString::TString(int n, char c)
 
 TString::TString(const TString& p)
 {
-	if (this->str != nullptr) delete[] str;
 	int length = strlen(p.str);
 	this->str = new char[length + 1];
 	for (int i = 0; i < length; i++)
@@ -58,10 +57,10 @@ void TString::Print()
 	std::cout << str;
 }
 
-//int TString::GetLen()
-//{
-//	return 0;
-//}
+int TString::GetLen()
+{
+	return len;
+}
 //
 //char* TString::GetString()
 //{
@@ -82,21 +81,28 @@ TString TString::operator+(const TString& p)
 		newstr.str[i] = p.str[j];
 
 	newstr.str[thisLength + pLength] = '\0';
-	 
+	newstr.len = strlen(newstr.str);
+
 	return newstr;
 }
 //
 //TString& TString::operator=(const TString& p)
 //{
 //	return;
-//	// TODO: вставьте здесь оператор return
 //}
 //
-//TString& TString::operator+=(const TString& p)
-//{
-//	return;
-//	// TODO: вставьте здесь оператор return
-//}
+TString& TString::operator+=(const TString& p)
+{
+	int thisLength = strlen(this->str);
+	int pLength = strlen(p.str);
+	int i = 0;
+	for (; i < thisLength; i++)
+		this->str[i] = this->str[i];
+
+	for (int j = 0; j < pLength; j++, i++)
+		this->str[i] = p.str[i];
+	return *this;
+}
 //
 //TString TString::operator+(char* s)
 //{
@@ -136,7 +142,7 @@ TString TString::operator+(const TString& p)
 //char& TString::operator[](int i)
 //{
 //	return ;
-//	// TODO: вставьте здесь оператор return
+//	// TODO: ГўГ±ГІГ ГўГјГІГҐ Г§Г¤ГҐГ±Гј Г®ГЇГҐГ°Г ГІГ®Г° return
 //}
 //
 //int TString::Find(char c)
@@ -153,5 +159,3 @@ TString TString::operator+(const TString& p)
 //{
 //	return nullptr;
 //}
-
-

@@ -6,13 +6,13 @@ using namespace std;
 
 int main()
 {
-	char* c, *c2;
+	char* c, * c2;
 	c2 = "world";
 	c = "hello";
 	TString stroka;
 	stroka = "hello";
 	TString strrr;
-	strrr = stroka + stroka;
+	strrr += stroka;
 	strrr.Print();
 	return 0;
 }
