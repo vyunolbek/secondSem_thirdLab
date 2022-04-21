@@ -12,12 +12,11 @@ public:
 	TString(int n, char c = 0);
 	TString(const TString& p);
 	~TString();
-	//int GetLen();
-	//char* GetString();
+	int GetLen();
 
 	TString operator+(const TString& p);
 	TString& operator=(const TString& p);
-	//TString& operator+=(const TString& p);
+	TString& operator+=(const TString& p);
 
 	//TString operator+ (char* s);
 	//TString operator= (char* s);
