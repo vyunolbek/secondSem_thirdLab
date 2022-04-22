@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 class TString
 {
 protected:
@@ -18,20 +17,22 @@ public:
 	TString& operator=(const TString& p);
 	TString& operator+=(const TString& p);
 
-	//TString operator+ (char* s);
-	//TString operator= (char* s);
-	//TString operator+= (char* s);
+	TString operator+ (char* s);
+	TString operator= (char* s);
+	TString operator+= (char* s);
 
-	//bool operator==(TString& p);
-	//bool operator>(TString& p);
-	//bool operator<(TString& p);
-	//bool operator!=(TString& p);
+	bool operator==(TString& p);
+	bool operator>(TString& p);
+	bool operator<(TString& p);
+	bool operator!=(TString& p);
 
-	//char& operator[](int i);
+	char& operator[](int i);
 
-	//int Find(char c);
-	//int Find(TString& p);
-	//TString* split(char c);
+	friend std::ostream& operator<<(std::ostream& B, TString& A);
+	friend std::istream& operator>>(std::istream& B, TString& A);
 
-	void Print();
+	int Find(char c);
+	int Find(TString& p);
+
+	void Print(); // Был временный костыль
 };
